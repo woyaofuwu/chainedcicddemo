@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<settings>
+  <mirrors>
+    <mirror>
+      <id>Nexus</id>
+      <name>Nexus Public Mirror</name>
+      <url>http://nexus-registry-nexus.apps.ocpdemo.sandbox1083.opentlc.com/repository/maven-all-public/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+  <servers>
+    <server>
+      <id>nexus</id>
+      <username>admin</username>
+      <password>pa55w0rd</password>
+    </server>
+  </servers>
+</settings>
+
