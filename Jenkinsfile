@@ -62,7 +62,7 @@ stage('Publish to Nexus') {
 steps {
 echo "Publish to Nexus"
 
-sh "${mvnCmd} deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus-registry-nexus.apps.ocpdemo.sandbox1083.opentlc.com//repository/releases"
+sh "${mvnCmd} deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/releases"
 
 }
 }
