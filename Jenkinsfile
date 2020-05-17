@@ -63,7 +63,7 @@ stage('Compile springboot') {
 steps {
 echo "Compile springboot"
 dir('springboothello'){
-      sh "${mvnCmd}  clean install"
+      sh "${mvnCmd}  clean package"
 }
 }
 }
