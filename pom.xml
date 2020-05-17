@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pl.dmichalski</groupId>
+    <groupId>pl.sf</groupId>
     <artifactId>jar-building-using-maven</artifactId>
     <version>1.0</version>
 <properties>
@@ -21,7 +21,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>pl.dmichalski.jar_building_using_maven.Runner</mainClass>
+                            <mainClass>pl.sf.jar_building_using_maven.Runner</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
