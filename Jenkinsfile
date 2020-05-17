@@ -70,7 +70,8 @@ dir('springboothello'){
 
 // Build the OpenShift Image in OpenShift and tag it.
 stage('Build and Tag OpenShift Image') {
-        echo "Building OpenShift container image "
+     steps {
+          echo "Building OpenShift container image "
 
         // TBD: Build Image, tag Image
         dir('springboothello'){
@@ -84,6 +85,7 @@ stage('Build and Tag OpenShift Image') {
              }
            }
     }
+     }
 }
 
 
