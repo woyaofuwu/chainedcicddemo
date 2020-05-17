@@ -2,9 +2,15 @@
 <settings>
   <mirrors>
     <mirror>
+      <id>NexusPrivate</id>
+      <name>Nexus Private Mirror</name>
+      <url>http://nexus3.nexus.svc.cluster.local:8081/repository/maven-releases/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+    <mirror>
       <id>Nexus</id>
       <name>Nexus Public Mirror</name>
-      <url>http://nexus3.nexus.svc.cluster.local:8081/repository/maven-releases/</url>
+      <url>http://nexus3.nexus.svc.cluster.local:8081/repository/maven-central/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
