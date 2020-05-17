@@ -10,3 +10,5 @@ oc expose svc/hellotest
 
 
 Notice: nexus_settings and project names in Jenkinsfile
+
+![alt text](https://github.com/jaysonzhao/chainedcicddemo/raw/master/buildscreen.png?raw=true)
