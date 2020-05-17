@@ -59,7 +59,14 @@ dir('depjar'){
 }
 
 
-
+stage('Compile springboot') {
+steps {
+echo "Compile springboot"
+dir('springboothello'){
+      sh "${mvnCmd}  clean install"
+}
+}
+}
 
 
 }
