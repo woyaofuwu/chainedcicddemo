@@ -3,7 +3,7 @@ def prefix = "test2020"
 
 // Set variable globally to be available in all stages
 // Set Maven command to always include Nexus Settings
-def mvnCmd = "mvn -s ./nexus_settings.xml"
+def mvnCmd = "mvn "
 // Set Development and Production Project Names
 def devProject = "${prefix}-tasks-dev"
 def prodProject = "${prefix}-tasks-prod"
@@ -62,7 +62,7 @@ stage('Publish to Nexus') {
 steps {
 echo "Publish to Nexus"
 
-sh "${mvnCmd} deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/releases"
+sh "${mvnCmd}  -s ./nexus_settings.xml deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/releases"
 
 }
 }
