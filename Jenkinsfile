@@ -62,7 +62,7 @@ stage('Publish to Nexus') {
 steps {
 echo "Publish to Nexus"
 
-sh "${mvnCmd}  -s ./nexus_settings.xml deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/releases"
+sh "${mvnCmd}  -s ./nexus_settings.xml deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/maven-releases"
 
 }
 }
