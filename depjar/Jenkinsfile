@@ -27,9 +27,9 @@ pipeline {
 stage('Checkout Source') {
 steps {
 // Replace the credentials with your credentials.
-git  url: 'https://github.com/jaysonzhao/chainedcicddemo.git'
+//git  url: 'https://github.com/jaysonzhao/chainedcicddemo.git'
 // or when using the Pipeline from the repo itself:
-// checkout scm
+ checkout scm
 script {
 def pom = readMavenPom file: 'pom.xml'
 def version = pom.version
