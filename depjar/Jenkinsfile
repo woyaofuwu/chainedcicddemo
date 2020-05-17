@@ -30,6 +30,7 @@ steps {
 //git  url: 'https://github.com/jaysonzhao/chainedcicddemo.git'
 // or when using the Pipeline from the repo itself:
  checkout scm
+ sh "cd depjar"
 script {
 def pom = readMavenPom file: 'pom.xml'
 def version = pom.version
