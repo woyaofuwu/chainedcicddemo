@@ -30,7 +30,7 @@ steps {
 //git  url: 'https://github.com/jaysonzhao/chainedcicddemo.git'
 // or when using the Pipeline from the repo itself:
  checkout scm
- dir（'depjar'){
+ dir（"depjar"){
 script {
 def pom = readMavenPom file: 'pom.xml'
 def version = pom.version
@@ -50,7 +50,7 @@ prodTag = "${version}"
 stage('Build Jar File') {
 steps {
 echo "Building version ${devTag}"
-dir（'depjar'){
+dir（"depjar"){
 sh "${mvnCmd} clean package -DskipTests=true"
 }
 }
@@ -63,7 +63,7 @@ sh "${mvnCmd} clean package -DskipTests=true"
 stage('Publish to Nexus') {
 steps {
 echo "Publish to Nexus"
-dir（'depjar'){
+dir（"depjar"){
 sh "${mvnCmd}  deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/maven-releases"
 }
 }
