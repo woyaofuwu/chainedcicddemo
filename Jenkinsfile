@@ -58,7 +58,7 @@ dir('depjar'){
 }
 }
 
-
+//compile a springboot app
 stage('Compile springboot') {
 steps {
 echo "Compile springboot"
@@ -67,6 +67,24 @@ dir('springboothello'){
 }
 }
 }
+
+// Build the OpenShift Image in OpenShift and tag it.
+      stage('Build and Tag OpenShift Image') {
+        echo "Building OpenShift container image "
+
+        // TBD: Build Image, tag Image
+        dir('springboothello'){
+               script {
+             openshift.withCluster() {
+               openshift.withProject("dev") {
+                 openshift.selector("bc", "hellotest").startBuild("--from-file=./target/spring-boot-01-hello-quick-0.0.1-SNAPSHOT.jar", "--wait=true")
+       
+                 //openshift.tag("hellotest:latest", "hellotest:v12")
+               }
+             }
+           }
+    }
+      }
 
 
 }
