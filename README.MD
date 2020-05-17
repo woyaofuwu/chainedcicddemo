@@ -5,3 +5,6 @@ oc start-build chainedcicddemo
 
 oc new-app hellotest
 oc expose svc/hellotest
+
+
+Notice: nexus_settings and project names in Jenkinsfile
