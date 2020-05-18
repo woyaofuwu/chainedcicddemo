@@ -52,8 +52,8 @@ dir('depjar'){
 stage('Publish to Nexus') {
 steps {
 echo "Publish to Nexus"
-dir('depjar'){
-      sh "${mvnCmd}  deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/maven-releases"
+dir('depjar'){  //it's optional
+    //  sh "${mvnCmd}  deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/maven-releases"
 }
 }
 }
