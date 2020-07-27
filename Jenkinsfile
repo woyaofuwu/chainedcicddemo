@@ -1,12 +1,12 @@
 // Set your project Prefix using your GUID
-def prefix = "test2020"
+def prefix = "andrew"
 
 // Set variable globally to be available in all stages
 // Set Maven command to always include Nexus Settings
 def mvnCmd = "mvn -s ./nexus_settings.xml"
 // Set Development and Production Project Names
-def devProject = "${prefix}-tasks-dev"
-def prodProject = "${prefix}-tasks-prod"
+def devProject = "dev-${prefix}"
+def prodProject = "prod-${prefix}"
 // Set the tag for the development image: version + build number
 def devTag = "0.0-0"
 // Set the tag for the production image: version
@@ -27,9 +27,9 @@ pipeline {
 stage('Checkout Source') {
 steps {
 // Replace the credentials with your credentials.
-//git  url: 'https://github.com/jaysonzhao/chainedcicddemo.git'
+git  url: 'https://github.com/jaysonzhao/chainedcicddemo.git'
 // or when using the Pipeline from the repo itself:
- checkout scm
+ //checkout scm
  
 }
 }
