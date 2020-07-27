@@ -27,7 +27,7 @@ pipeline {
 stage('Checkout Source') {
 steps {
 // Replace the credentials with your credentials.
-git  url: 'https://github.com/jaysonzhao/chainedcicddemo.git'
+git  url: 'https://github.com/woyaofuwu/chainedcicddemo.git'
 // or when using the Pipeline from the repo itself:
  //checkout scm
  
